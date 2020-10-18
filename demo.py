@@ -25,15 +25,15 @@ def get_book_by_id_via_query(book_id: int):
 
 from enum import Enum
 
-class ModeEnum(Enum):
+class QueryModeEnum(Enum):
     AUTHOR = 'author'
     CUSTOMER = 'customer'
 
 @app.get('/book/{book_id}/with_mode')
-def get_book_by_id_mix(book_id: int, mode: ModeEnum):
+def get_book_by_id_mix(book_id: int, query_mode: QueryModeEnum):
     return {
         'book_id': book_id,
-        'mode': mode,
+        'query_mode': query_mode,
     }
 
 
