@@ -50,7 +50,7 @@ def get_book_by_id_with_validation(book_id: int = Path(..., ge=1)):
     }
 
 # --------------------------------------------------
-# How about some validation
+# And some extra documents
 # --------------------------------------------------
 @app.get('/book/{book_id}/with_validation_and_some_extra_documnet')
 def get_book_by_id_with_validation_and_some_extra_documnet(
