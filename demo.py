@@ -70,6 +70,6 @@ def get_book_by_id_with_validation_and_some_extra_documnet(
 # --------------------------------------------------
 from fastapi.responses import RedirectResponse
 
-@app.get('/')
+@app.get('/', include_in_schema=False)
 def home():
     return  RedirectResponse('/docs')
