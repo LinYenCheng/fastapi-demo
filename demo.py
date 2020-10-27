@@ -83,14 +83,14 @@ class Book(BaseModel):
 def get_book_by_id_with_validation_and_some_extra_documnet(
     book_id: int = Path(..., ge=1, example=5)
 ):
-    # return {'book_id': book_id}
+    return {'book_id': book_id}
 
-    return {
-        'bid': book_id,
-        'name': 'name of bid {}'.format(book_id),
-        'price': 39.95,
-        'category': 'cooking'
-    }
+    # return {
+    #     'bid': book_id,
+    #     'name': 'name of bid {}'.format(book_id),
+    #     'price': 39.95,
+    #     'category': 'cooking'
+    # }
 
 
 # --------------------------------------------------
