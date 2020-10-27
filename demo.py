@@ -63,3 +63,13 @@ def get_book_by_id_with_validation_and_some_extra_documnet(
     return {
         'book_id': book_id
     }
+
+
+# --------------------------------------------------
+# Redirect home to docs
+# --------------------------------------------------
+from fastapi.responses import RedirectResponse
+
+@app.get('/')
+def home():
+    return  RedirectResponse('/docs')
