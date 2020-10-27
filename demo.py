@@ -94,7 +94,7 @@ def get_book_by_id_with_validation_and_some_extra_documnet(
 
 
 # --------------------------------------------------
-# Can we use BaseModel object as input? 
+# Can we use BaseModel as input? 
 # --------------------------------------------------
 @app.post('/book', response_model=Book)
 def get_book_by_id_with_validation_and_some_extra_documnet(
